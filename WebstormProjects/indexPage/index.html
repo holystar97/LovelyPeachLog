@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index Page</title>
+</head>
+<body>
+    <script>
+        var index=1;
+    </script>
+    <div>
+        <input type="text" id="txtVal">
+        <button onclick="addLi()">등록</button>
+        <ul id="list">
+
+        </ul>
+        <script>
+            function addLi(){
+                var txtVal =document.getElementById('txtVal').value,
+                    listNode=document.getElementById('list'),
+                    liNode=document.createElement("LI"),
+                    txtNode=document.createTextNode("사용자 "+index+ " :" + txtVal),
+                    btnNode=document.createElement("button");
+                    btnNode.setAttribute("id","redirect");
+                    btnNode.innerHTML="Connect";
+
+                    index++;
+
+                    liNode.appendChild(txtNode);
+                    liNode.appendChild(btnNode);
+                    listNode.appendChild(liNode);
+
+                var elements =document.querySelectorAll('#redirect')
+                    elements.forEach(function(el){
+                    el.addEventListener('click',() =>{
+                        window.location.href="file:///Users/mkrice/WebstormProjects/indexPage/final.html";
+                    });
+
+
+                })
+
+
+            }
+        </script>
+
+        <script>
+
+
+        </script>
+    </div>
+
+
+        <!--<button id="redirect">Connect</button>
+        <script>
+            document.querySelector('#redirect')
+                .addEventListener('click',() =>{
+                    window.location.href="file:///Users/mkrice/WebstormProjects/indexPage/final.html";
+                });
+        </script>-->
+
+
+
+
+</body>
+</html>

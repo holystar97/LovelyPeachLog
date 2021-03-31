@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>등록페이지</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 300px;
+            display: grid;
+        }
+    </style>
+    <script>
+
+        var text_value;
+        function init() {
+            drawList();
+        }
+
+        function drawList() {
+            if(localStorage.length == 0) {
+                console.log("등록 IP 없음");
+                return;
+            }
+
+            for(let i = 0; i < localStorage.length; i++) {
+                text_value = localStorage.key(i);
+                console.log("등록 IP: " + text_value);
+                //ul에 추가
+                const target_list = document.querySelector("#target_list");
+                const target = document.createElement("li");
+
+                //target.setAttribute("onclick", "location.href='https://www.naver.com'");
+                target.innerHTML = text_value;
+                target.("text");
+                target_list.appendChild(target);
+
+                const button = document.createElement("button");
+                button.setAttribute("style", "float:right");
+                button.innerHTML = "Connection";
+                button.setAttribute("id","redirect");
+
+                target.append(button);
+
+                var ans;
+                var bt = document.querySelectorAll(".redirect"); // get all buttons with the class
+                for (var i=0;i<bt.length;i++) { // newer browsers can use forEach
+                    bt[i].onclick = function () { // assign anonymous handler
+                        var t = document.querySelectorAll(".text"); // get all buttons with the class
+                        for (var j = 0; j < t.length; j++) { // newer browsers can use forEach
+                            if (i == j) {
+                                t[j].onclick = function () { // assign anonymous handler
+                                    ans = t[j];
+                                }
+                            }
+
+                        }
+                        window.location.href = "file:///Users/mkrice/WebstormProjects/indexPage/final.html?ip=" + ans;
+                    }
+                }
+
+            }
+
+        }
+        function addList(text) {
+            if(document.querySelector("#text_value").value == ""){
+                alert("IP를 입력해주세요");
+                document.querySelector("#text_value").focus();
+            }
+
+            text_value = document.querySelector("#text_value").value;
+
+            const target_list = document.querySelector("#target_list");
+            const target = document.createElement("li");
+
+            //target.setAttribute("onclick", "location.href='https://www.naver.com'");
+
+            target.innerHTML = text_value;
+            text_value.setAttribute("text");
+            target_list.appendChild(target);
+
+            const button = document.createElement("button");
+            button.setAttribute("id","redirect");
+            button.innerHTML = "Connection";
+            target.append(button);
+
+            localStorage.setItem(text_value, text_value);
+
+            var ans;
+            var bt = document.querySelectorAll(".redirect"); // get all buttons with the class
+            for (var i=0;i<bt.length;i++) { // newer browsers can use forEach
+                bt[i].onclick = function () { // assign anonymous handler
+                    var t = document.querySelectorAll(".text"); // get all buttons with the class
+                    for (var j = 0; j < t.length; j++) { // newer browsers can use forEach
+                        if (i == j) {
+                            t[j].onclick = function () { // assign anonymous handler
+                                ans = t[j];
+                            }
+                        }
+
+                    }
+                    window.location.href = "file:///Users/mkrice/WebstormProjects/indexPage/final.html?ip=" + ans;
+                }
+            }
+
+        }
+    </script>
+
+</head>
+<body onload="init();">
+<input type="text" id="text_value">
+<button onclick="addList();">등록</button>
+<ul id="target_list">
+    <!--IP 등록 목록 출력-->
+</ul>
+
+<div id="user">
+</div>
+</body>
+</html>

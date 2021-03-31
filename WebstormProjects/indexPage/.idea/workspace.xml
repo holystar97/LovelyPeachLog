@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f94bd052-abee-4d4e-b6e9-af4a625399f2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fZRTwI0KNrKuBKmZraTknT2uTL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/monitoringSystem/css" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/monitoringSystem/css" />
+      <recent name="$PROJECT_DIR$/monitoringSystem/js" />
+      <recent name="$PROJECT_DIR$/monitoringSystem" />
+      <recent name="$PROJECT_DIR$/testPage" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/monitoringSystem/css" />
+      <recent name="$PROJECT_DIR$/monitoringSystem/assets/img" />
+      <recent name="$PROJECT_DIR$/monitoringSystem" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f94bd052-abee-4d4e-b6e9-af4a625399f2" name="Default Changelist" comment="" />
+      <created>1596423640505</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596423640505</updated>
+      <workItem from="1596423641898" duration="9265000" />
+      <workItem from="1596507166414" duration="8106000" />
+      <workItem from="1596531276346" duration="275000" />
+      <workItem from="1596594831168" duration="3280000" />
+      <workItem from="1596690136549" duration="4820000" />
+      <workItem from="1596765911804" duration="4980000" />
+      <workItem from="1596856496682" duration="4427000" />
+      <workItem from="1596939231102" duration="1982000" />
+      <workItem from="1597025837815" duration="8970000" />
+      <workItem from="1597069234609" duration="2937000" />
+      <workItem from="1597112867412" duration="3073000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="916" y="187" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597038567153">
+      <screen x="0" y="23" width="1440" height="822" />
+    </state>
+    <state x="916" y="187" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.822@0.23.1440.822" timestamp="1597038567153" />
+    <state x="156" y="222" width="986" height="623" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1596696498468">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="156" y="222" width="986" height="623" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.823@0.23.1440.823" timestamp="1596696498468" />
+    <state x="740" y="110" width="604" height="735" key="find.popup" timestamp="1596423781352">
+      <screen x="0" y="23" width="1440" height="822" />
+    </state>
+    <state x="740" y="110" width="604" height="735" key="find.popup/0.23.1440.822@0.23.1440.822" timestamp="1596423781352" />
+    <state x="385" y="195" key="run.anything.popup" timestamp="1597069789671">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="385" y="195" key="run.anything.popup/0.23.1440.821@0.23.1440.821" timestamp="1597069789671" />
+    <state x="300" y="169" width="670" height="679" key="search.everywhere.popup" timestamp="1597116643778">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="300" y="168" width="670" height="676" key="search.everywhere.popup/0.23.1440.821@0.23.1440.821" timestamp="1596860222610" />
+    <state x="300" y="169" width="670" height="679" key="search.everywhere.popup/0.23.1440.823@0.23.1440.823" timestamp="1597116643778" />
+    <state x="300" y="169" width="670" height="680" key="search.everywhere.popup/0.23.1440.825@0.23.1440.825" timestamp="1597074784568" />
+  </component>
+</project>

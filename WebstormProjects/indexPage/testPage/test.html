@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>등록페이지</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 600px;
+            display: grid;
+        }
+    </style>
+    <script>
+        function init() {
+            drawList();
+        }
+
+        function drawList() {
+            if(localStorage.length == 0) {
+                console.log("등록 IP 없음");
+                return;
+            }
+
+            for(let i = 0; i < localStorage.length; i++) {
+                let ip_address = localStorage.key(i);
+                console.log("등록 IP: " + ip_address);
+
+                //ul에 추가
+                const target_list = document.querySelector("#target_list");
+                const target = document.createElement("li");
+
+                target.innerHTML = ip_address;
+                target_list.appendChild(target);
+
+                const button = document.createElement("button");
+                button.setAttribute("style", "float:right");
+                //param GET 방식으로 전달 event 추가
+                button.addEventListener("click", function() {
+                    let ip = ip_address;
+                    document.location.href = "final.html?" +
+                        "ip_address="+ip;
+                });
+                button.innerHTML = "Connection";
+                target.append(button);
+
+                const button2 = document.createElement("button");
+                button2.setAttribute("style", "float:right");
+                // button2.setAttribute("id","register")
+                //param GET 방식으로 전달 event 추가
+                button2.addEventListener("click", function() {
+                    target_list.removeChild(target);
+                });
+                button2.innerHTML = "Disconnection";
+                target.append(button2);
+
+
+            }
+        }
+
+        function addList(text) {
+            if(document.querySelector("#ip_address").value == ""){
+                alert("IP를 입력해주세요");
+                document.querySelector("#ip_address").focus();
+            }
+
+            let ip_address = document.querySelector("#ip_address").value;
+            const target_list = document.querySelector("#target_list");
+            const target = document.createElement("li");
+
+
+            target.innerHTML = ip_address;
+            target_list.appendChild(target);
+
+            const button = document.createElement("button");
+            button.setAttribute("style", "float:right");
+            button.setAttribute("id","register")
+            //param GET 방식으로 전달 event 추가
+            button.addEventListener("click", function() {
+                let ip = ip_address;
+                document.location.href = "final.html?" +
+                    "ip_address="+ip;
+            });
+            button.innerHTML = "Connection";
+            target.append(button);
+
+            const button2 = document.createElement("button");
+            button2.setAttribute("style", "float:right");
+            // button2.setAttribute("id","register")
+            //param GET 방식으로 전달 event 추가
+            button2.addEventListener("click", function() {
+                target_list.removeChild(target);
+            });
+            button2.innerHTML = "Disconnection";
+            target.append(button2);
+
+
+            localStorage.setItem(ip_address, ip_address);
+        }
+    </script>
+</head>
+<body onload="init();">
+<input type="text" id="ip_address">
+<button onclick="addList();">등록</button>
+<ul id="target_list">
+    <!--IP 등록 목록 출력-->
+</ul>
+
+<div id="user">
+</div>
+</body>
+</html>
